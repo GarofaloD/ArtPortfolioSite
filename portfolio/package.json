@@ -1,0 +1,14 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Sarah's art portfolio",
+  "main": "index.js",
+  "scripts": {
+    "sassRun": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "Daniel Garofalo",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
