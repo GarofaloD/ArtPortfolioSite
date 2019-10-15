@@ -1,6 +1,91 @@
-$primary-color : #444;
+@import 'config';
 
+//Whole project
+*{
+  box-sizing: border-box;
+}
+
+
+
+//Main body css
 body {
+  @include background;
   background: $primary-color;
   color: white;
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+
+
+//Headings
+h1, h2, h3 {
+  margin: 0;
+  font-weight: 400;
+
+  &.lg-heading {
+    font-size: 6rem; //Remember that this is multiplying the size of the standard html text size (16px)
+
+  }
+
+  &.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: rgba(lighten($primary-color, 2), 0.5);
+
+  }
+}
+
+
+//Links or Buttons
+a {
+  color: white;
+  text-decoration: none;
+
+}
+
+
+//Header. This will also includes the menu button
+header{
+  position: fixed; //This will keep the menu button at the very top
+  z-index: 2;
+  width: 100%;
+
+}
+
+
+//Applies to the span for the lastname
+.text-secondary {
+  color: $secondary-color
+}
+
+
+//Main block and Icons
+main {
+  //section
+  padding: 4rem;
+  height: 100%;
+
+  &#home {
+    overflow: hidden; //No scrollbars
+
+    h1 {
+      margin-top: 20vh;
+    }
+  }
+
+  .icons {  //Full icon section
+    margin-top: 1rem;
+
+    a { //Separation between icons
+      padding: 0.4rem;
+
+      &:hover {
+        color: $secondary-color;
+        @include easeOut
+      }
+    }
+  }
 }
