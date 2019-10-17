@@ -12,14 +12,14 @@ $background-opacity: 0.9;
 }
 
 @mixin background{
-  @if $show-home-image {
+  @if $show-home-image {  //If there is an image for the background...
     &#bg-img { //Id for the body
       background: $home-image;
       background-attachment: fixed;
       background-size: cover;
 
 
-      &:after {  //Overlay with opacity for the background image
+      &:after {  // keyword for overlay with opacity for the background image
         content: '';
         position: absolute;
         top: 0;
@@ -33,6 +33,17 @@ $background-opacity: 0.9;
 
   }
 }
+
+//Set text color
+@function set-text-color($color) {
+  @if (lightness($color) > 40 ) {
+    @return #000;
+  } @else {
+    @return #fff;
+}
+}
+
+
 
 //Media query mixins
 @mixin mediaSm {
