@@ -67,10 +67,11 @@
              </h2>
 
             <div class="works">
+
                 <div class="item">
-                    <a href="#!" class="">
-                        <img src="img/works/IMG-2609.jpg" alt="project">
-                    </a>
+
+                        <img src="img/works/IMG-2609.jpg" alt="project" onclick="onClick(this)">
+
                     <a href="#" class="btn-light">
                         <i class="fas fa-eye"></i> Painting name
                     </a>
@@ -78,9 +79,13 @@
                         <i class="fab fa-github"></i> Painting info
                     </a>
                 </div>
+
+
+
+
                 <div class="item">
-                    <a href="#!" class="">
-                        <img src="img/works/IMG-2599.jpg" alt="project">
+                    <a href="#!" class="imageLink">
+                        <img src="img/works/IMG-2599.jpg" style="max-width:100%;cursor:pointer" alt="project" onclick="onClick(this)">
                     </a>
                     <a href="#" class="btn-light">
                         <i class="fas fa-eye"></i>Project
@@ -90,8 +95,8 @@
                     </a>
                 </div>
                 <div class="item">
-                    <a href="#!" class="">
-                        <img src="img/works/IMG-5238.jpg" alt="project">
+                    <a href="#!" class="imageLink">
+                        <img src="img/works/IMG-5238.jpg" alt="project" onclick="onClick(this)">
                     </a>
                     <a href="#" class="btn-light">
                         <i class="fas fa-eye"></i>Project
@@ -101,8 +106,8 @@
                     </a>
                 </div>
                 <div class="item">
-                    <a href="#!" class="">
-                        <img src="img/works/IMG-3193.jpg" alt="project">
+                    <a href="#!" class="imageLink">
+                        <img src="img/works/IMG-3193.jpg" alt="project" onclick="onClick(this)">
                     </a>
                     <a href="#" class="btn-light">
                         <i class="fas fa-eye"></i>Project
@@ -112,8 +117,8 @@
                     </a>
                 </div>
                 <div class="item">
-                    <a href="#!" class="">
-                        <img src="img/works/IMG-3198.jpg" alt="project">
+                    <a href="#!" class="imageLink">
+                        <img src="img/works/IMG-3198.jpg" alt="project" onclick="onClick(this)">
                     </a>
                     <a href="#" class="btn-light">
                         <i class="fas fa-eye"></i>Project
@@ -122,9 +127,11 @@
                         <i class="fab fa-github"></i>GIthub
                     </a>
                 </div>
+
+
                 <div class="item">
-                    <a href="#!" class="">
-                        <img src="img/works/IMG-2607.jpg" alt="project">
+                    <a href="#!" class="imageLink">
+                        <img src="img/works/IMG-2607.jpg" alt="project" onclick="onClick(this)">
                     </a>
                     <a href="#" class="btn-light">
                         <i class="fas fa-eye"></i>Project
@@ -133,8 +140,22 @@
                         <i class="fab fa-github"></i>GIthub
                     </a>
                 </div>
+
+
+
             </div>
         </main>
+
+<!--    Modal-->
+    <div id="modal01" class="modal" onclick="this.style.display='none'">
+        <span class="close">&times;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <div class="modal-content">
+            <img id="img01" style="max-width:100%">
+        </div>
+    </div>
+
+
+
 
         <footer id="main-footer">
             Copyright &copy; 2019

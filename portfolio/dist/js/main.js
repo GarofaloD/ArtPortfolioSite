@@ -10,7 +10,8 @@ const navItems = document.querySelectorAll('.nav-item');
 let showMenu = false;
 menuBtn.addEventListener('click', toggleMenu);  //When click, call for the function
 
-
+// const imageLink = document.querySelector('imageLink');
+// imageLink.addEventListener('click', onClick);
 
 
 
@@ -39,4 +40,11 @@ function toggleMenu () {
 
         showMenu = false;
     }
+}
+
+
+
+function onClick(element) {
+    document.getElementById("img01").src = element.src;
+    document.getElementById("modal01").style.display = "block";
 }
