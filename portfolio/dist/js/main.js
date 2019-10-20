@@ -1,4 +1,4 @@
-//Select DOM items
+//Select DOM items > Menu
 const menuBtn = document.querySelector('.menu-btn');
 const menu = document.querySelector('.menu');
 const menuNav = document.querySelector('.menu-nav');
@@ -6,13 +6,11 @@ const menuBranding = document.querySelector('.menu-branding');
 
 const navItems = document.querySelectorAll('.nav-item');
 
+
+
 //Initial state
 let showMenu = false;
 menuBtn.addEventListener('click', toggleMenu);  //When click, call for the function
-
-// const imageLink = document.querySelector('imageLink');
-// imageLink.addEventListener('click', onClick);
-
 
 
 //Custom functions

@@ -15,6 +15,7 @@ body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
+
 }
 
 
@@ -59,6 +60,80 @@ header{
 .text-secondary {
   color: $secondary-color
 }
+
+//Welcome Panel
+/* panel layout mechanics */
+.panel-wrap {
+  visibility: visible;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 40%;
+  //transform: translateX(0%);
+  transition: 5s ease-out;
+}
+
+.closeWelcomePanel {
+  text-decoration:none;
+  float:left;
+  font-size:25px;
+  font-weight: bold;
+  color:black;
+  z-index: 1;
+  padding-left: 10px;
+  padding-top: 0px;
+  transition: 5s;
+}
+.panel {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  opacity: 0.7;
+  color: black;
+  overflow: auto;
+  padding: 5em;
+
+  &.actualText {
+    padding-top: 50px;
+  }
+}
+
+/* simulate panel state control --
+this can also be triggered by a
+class name added to the body tag.
+Just using a checkbox sibling here
+for simplicity
+//*/
+//[type="checkbox"]:checked ~ .panel-wrap {
+//  transform: translateX(100%);
+//}
+
+
+
+/* demo display */
+*,*:before, *:after {box-sizing: border-box;}
+
+body {
+  font-family: sans-serif;
+  font-size: 18px;
+}
+h3 {
+  margin: 0;
+}
+p {
+  line-height: 1.4;
+  margin: 2em 0 0 0;
+}
+[type="checkbox"] {
+  font-size: 1em;
+}
+
+
+
 
 
 //Main block and Icons
@@ -164,8 +239,6 @@ main {
   overflow:auto;
   background-color:rgb(0,0,0);
   background-color:rgba(0,0,0,0.8);
-
-
 }
 
 .modal-content{
@@ -177,7 +250,6 @@ main {
   transform: translate(-50%, -50%);
 
 }
-
 
 .modal-hover-opacity {
   opacity:1;
@@ -193,14 +265,17 @@ main {
 
 
 .close {
-  text-decoration:none;float:right;font-size:24px;font-weight:bold;color:white
+  text-decoration:none;float:left;font-size:40px;font-weight:bold;color:white;
+  padding-left: 50px;
+  padding-top: 40px;
+
 }
+
 .container1 {
   width:200px;
   display:inline-block;
 }
 .modal-content, #caption {
-
   -webkit-animation-name: zoom;
   -webkit-animation-duration: 0.6s;
   animation-name: zoom;
@@ -217,8 +292,6 @@ main {
   from {transform:scale(0)}
   to {transform:scale(1)}
 }
-
-
 
 
 

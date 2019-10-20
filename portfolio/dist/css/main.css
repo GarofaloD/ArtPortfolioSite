@@ -138,6 +138,65 @@ header {
 .text-secondary {
   color: #eece1a; }
 
+/* panel layout mechanics */
+.panel-wrap {
+  visibility: visible;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 40%;
+  transition: 5s ease-out; }
+
+.closeWelcomePanel {
+  text-decoration: none;
+  float: left;
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+  z-index: 1;
+  padding-left: 10px;
+  padding-top: 0px;
+  transition: 5s; }
+
+.panel {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  opacity: 0.7;
+  color: black;
+  overflow: auto;
+  padding: 5em; }
+  .panel.actualText {
+    padding-top: 50px; }
+
+/* simulate panel state control --
+this can also be triggered by a
+class name added to the body tag.
+Just using a checkbox sibling here
+for simplicity
+//*/
+/* demo display */
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+body {
+  font-family: sans-serif;
+  font-size: 18px; }
+
+h3 {
+  margin: 0; }
+
+p {
+  line-height: 1.4;
+  margin: 2em 0 0 0; }
+
+[type="checkbox"] {
+  font-size: 1em; }
+
 main {
   padding: 4rem;
   min-height: calc(100vh - 60px); }
@@ -222,10 +281,12 @@ main {
 
 .close {
   text-decoration: none;
-  float: right;
-  font-size: 24px;
+  float: left;
+  font-size: 40px;
   font-weight: bold;
-  color: white; }
+  color: white;
+  padding-left: 50px;
+  padding-top: 40px; }
 
 .container1 {
   width: 200px;
