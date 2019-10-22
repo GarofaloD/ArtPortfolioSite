@@ -1,5 +1,5 @@
 //Variables
-$primary-color : #444;
+$primary-color : #fff;
 $secondary-color: #eece1a;
 $show-home-image: true;
 $home-image: url(../img/background/sunsetNight.jpg);
@@ -27,7 +27,8 @@ $background-opacity: 0.9;
         width: 100%;
         height: 100%;
         //background: rgba($primary-color, $background-opacity);
-        background: rgba($primary-color, 0.5);
+        //background: rgba($primary-color, 0.3);
+        background: rgba(#444, 0.5);
         z-index: -1;
       }
     }

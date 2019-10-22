@@ -9,7 +9,7 @@
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: #fff;
+    background: #000;
     transition: all 0.5s ease-out; }
   .menu-btn.close {
     transform: rotate(180deg); }
@@ -42,14 +42,14 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #373737;
+    background: #f2f2f2;
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all 0.5s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: #444;
+    background: #fff;
     transform: translate3d(0, 100%, 0);
     transition: all 0.5s ease-out; }
     .menu-branding.show {
@@ -74,7 +74,7 @@
     text-transform: uppercase;
     padding: 1rem 0;
     font-weight: 300;
-    color: #fff;
+    color: #000;
     text-decoration: none;
     transition: all 0.5s ease-out; }
     .menu .nav-link:hover {
@@ -96,8 +96,8 @@
   box-sizing: border-box; }
 
 body {
-  background: #444;
-  color: #fff;
+  background: #fff;
+  color: #000;
   height: 100%;
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -123,8 +123,10 @@ h1, h2, h3 {
     font-size: 6rem; }
   h1.sm-heading, h2.sm-heading, h3.sm-heading {
     margin-bottom: 2rem;
-    padding: 0.2rem 1rem;
-    background: rgba(73, 73, 73, 0.5); }
+    padding: 0.2rem 1rem; }
+
+#smHeadingIndex {
+  color: #eece1a; }
 
 a {
   color: white;
@@ -138,26 +140,31 @@ header {
 .text-secondary {
   color: #eece1a; }
 
-/* panel layout mechanics */
 .panel-wrap {
-  visibility: visible;
   position: fixed;
   top: 0;
   bottom: 0;
   right: 0;
   width: 40%;
-  transition: 5s ease-out; }
+  transform: translateX(100%);
+  transition: 5s ease-out;
+  transition: all 0.5s ease-out; }
+  .panel-wrap.show {
+    visibility: visible;
+    transform: translate3d(0, 0, 0); }
 
 .closeWelcomePanel {
-  text-decoration: none;
   float: left;
-  font-size: 25px;
-  font-weight: bold;
+  font-size: 20px;
+  font-weight: normal;
   color: black;
   z-index: 1;
   padding-left: 10px;
-  padding-top: 0px;
-  transition: 5s; }
+  padding-top: 20px;
+  transition: all 0.5s ease-out; }
+  .closeWelcomePanel.show {
+    visibility: visible;
+    transform: translate3d(0, 0, 0); }
 
 .panel {
   position: absolute;
@@ -165,20 +172,35 @@ header {
   bottom: 0;
   left: 0;
   right: 0;
-  background: white;
+  background: rgba(255, 255, 255, 0.9);
   opacity: 0.7;
   color: black;
   overflow: auto;
-  padding: 5em; }
-  .panel.actualText {
-    padding-top: 50px; }
+  padding-left: 1em;
+  transition: all 0.5s ease-out; }
+  .panel.show {
+    visibility: visible;
+    transform: translate3d(0, 0, 0); }
+
+.actualText {
+  margin: 100px;
+  padding-top: 200px;
+  padding-left: 3em;
+  padding-right: 3em;
+  color: #000;
+  font-weight: bold;
+  z-index: 1;
+  transition: all 0.5s ease-out; }
+  .actualText.show {
+    visibility: visible;
+    transform: translate3d(0, 0, 0); }
 
 /* simulate panel state control --
-this can also be triggered by a
-class name added to the body tag.
-Just using a checkbox sibling here
-for simplicity
-//*/
+  this can also be triggered by a
+  class name added to the body tag.
+  Just using a checkbox sibling here
+  //for simplicity
+  ////*/
 /* demo display */
 *, *:before, *:after {
   box-sizing: border-box; }
@@ -232,7 +254,7 @@ main {
   .about-info .job-3 {
     grid-area: job-3; }
   .about-info .job {
-    background: #515151;
+    background: white;
     padding: 0.5rem;
     border-bottom: #eece1a 5px solid; }
 
@@ -339,60 +361,16 @@ main {
     color: #000; }
 
 .btn-dark {
-  background: black;
+  background: gray;
   color: #fff; }
 
 .btn-light {
-  background: #c4c4c4;
+  background: white;
   color: #000; }
 
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: #2b2b2b;
-  color: #fff;
+  background: #e6e6e6;
+  color: #000;
   height: 60px; }
-
-@media screen and (min-width: 1171px) {
-  .works {
-    grid-template-columns: repeat(4, 1fr); } }
-
-@media screen and (min-width: 769px) and (max-width: 1170px) {
-  .works {
-    grid-template-columns: repeat(3, 1fr); } }
-
-@media screen and (max-width: 678px) {
-  main {
-    align-items: center;
-    text-align: center; }
-    main .lg-heading {
-      line-height: 1;
-      margin-bottom: 1rem; }
-  ul.menu-nav, div.menu-branding {
-    float: none;
-    width: 100%;
-    min-height: 0; }
-    ul.menu-nav.show, div.menu-branding.show {
-      transform: translate3d(0, 0, 0); }
-  .menu-nav {
-    height: 60vh;
-    transform: translate3d(-100, 0, 0);
-    font-size: 24px; }
-  .menu-branding {
-    height: 40vh;
-    transform: translate3d(100%, 0, 0); }
-    .menu-branding .portrait {
-      background: url(../img/portrait/sarahPortrait.jpg);
-      width: 200px;
-      height: 200px; }
-  .about-info {
-    grid-template-areas: 'bioimage' 'bio' 'job-1' 'job-2' 'job-3';
-    grid-template-columns: 1fr; }
-  .works {
-    grid-template-columns: repeat(2, 1fr); } }
-
-@media screen and (max-width: 500px) {
-  main#home h1 {
-    margin-top: 10vh; }
-  .works {
-    grid-template-columns: repeat(1, 1fr); } }

@@ -7,8 +7,14 @@ const menuBranding = document.querySelector('.menu-branding');
 const navItems = document.querySelectorAll('.nav-item');
 
 
+//Select DOM items > Welcome Panel
+const panelWrap = document.querySelector('.panel-wrap');
+const panel = document.querySelector('panel');
+const closePanel = document.querySelector('.closeWelcomePanel');
+const welcomeText = document.querySelector('.actualText');
 
-//Initial state
+
+//Initial state - Menu
 let showMenu = false;
 menuBtn.addEventListener('click', toggleMenu);  //When click, call for the function
 
@@ -40,6 +46,22 @@ function toggleMenu () {
     }
 }
 
+
+//Initial state - Welcome page
+let showWelcome = true;
+closePanel.addEventListener('click', toggleWelcome);
+
+function toggleWelcome () {
+    if(showWelcome) {
+        panelWrap.classList.remove('show');
+        closePanel.classList.remove('show');
+        panel.classList.remove('show');
+        welcomeText.classList.remove('show');
+
+        showWelcome = false;
+
+    }
+}
 
 
 function onClick(element) {
