@@ -60,6 +60,10 @@ header{
 }
 
 
+//Applies to Span for Name
+.firstName {
+  color: white;
+}
 //Applies to the span for the lastname
 .text-secondary {
   color: $secondary-color
@@ -131,7 +135,6 @@ header{
   padding-left: 3em;
   padding-right: 3em;
   color: #000;
-  font-weight: bold;
   z-index: 1;
   @include easeOut;
 
@@ -175,6 +178,10 @@ header{
     font-size: 1em;
   }
 
+  .fa-smile {
+    color: deeppink;
+    size: 9rem;
+  }
 
   //Main block and Icons
   main {
@@ -227,6 +234,8 @@ header{
     .bio {
       grid-area: bio;
       font-size: 1.5rem;
+      font-weight: lighter;
+      padding: 0 8rem 1rem 5rem;
     }
 
     .job-1 {
@@ -245,6 +254,7 @@ header{
       background: lighten($primary-color, 5);
       padding: 0.5rem;
       border-bottom: $secondary-color 5px solid;
+      font-weight: lighter;
     }
   }
 

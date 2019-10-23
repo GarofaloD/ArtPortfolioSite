@@ -26,7 +26,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
+  opacity: 1;
   visibility: hidden; }
   .menu.show {
     visibility: visible; }
@@ -73,7 +73,7 @@
     font-size: 25px;
     text-transform: uppercase;
     padding: 1rem 0;
-    font-weight: 300;
+    font-weight: 500;
     color: #000;
     text-decoration: none;
     transition: all 0.5s ease-out; }
@@ -137,6 +137,9 @@ header {
   z-index: 2;
   width: 100%; }
 
+.firstName {
+  color: white; }
+
 .text-secondary {
   color: #eece1a; }
 
@@ -188,7 +191,6 @@ header {
   padding-left: 3em;
   padding-right: 3em;
   color: #000;
-  font-weight: bold;
   z-index: 1;
   transition: all 0.5s ease-out; }
   .actualText.show {
@@ -219,6 +221,10 @@ p {
 [type="checkbox"] {
   font-size: 1em; }
 
+.fa-smile {
+  color: deeppink;
+  size: 9rem; }
+
 main {
   padding: 4rem;
   min-height: calc(100vh - 60px); }
@@ -246,7 +252,9 @@ main {
     border-color: #eece1a 3px solid; }
   .about-info .bio {
     grid-area: bio;
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    font-weight: lighter;
+    padding: 0 8rem 1rem 5rem; }
   .about-info .job-1 {
     grid-area: job-1; }
   .about-info .job-2 {
@@ -256,7 +264,8 @@ main {
   .about-info .job {
     background: white;
     padding: 0.5rem;
-    border-bottom: #eece1a 5px solid; }
+    border-bottom: #eece1a 5px solid;
+    font-weight: lighter; }
 
 .works {
   display: grid;
