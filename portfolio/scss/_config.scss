@@ -55,12 +55,12 @@ $background-opacity: 0.9;
 }
 
 @mixin mediaMd {
-  @media screen and (max-width: 678px) {  //For 678px or less
+  @media screen and (min-width: 501px) and (max-width: 678px) {  //For 678px or less
     @content;
   }
 }
 @mixin mediaLg {
-  @media screen and (min-width: 769px) and (max-width: 1170px) {  //Between 769 and 1170 px
+  @media screen and (min-width: 679px) and (max-width: 1170px) {  //Between 769 and 1170 px
     @content;
   }
 }

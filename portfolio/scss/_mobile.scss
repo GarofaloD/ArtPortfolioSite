@@ -1,7 +1,7 @@
 //Widescreen
 @include mediaXl{
   .works {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -9,6 +9,17 @@
 @include mediaLg{
   .works {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .about-info {
+    grid-template-areas:
+            'bioimage'
+            'bio'
+            'job-1'
+            'job-2'
+            'job-3';
+
+    grid-template-columns: 1fr;
   }
 }
 
@@ -46,6 +57,7 @@
 
     .portrait {
       background: url(../img/portrait/sarahPortrait.jpg); //Change for a smaller image
+      background-size: 13rem;
       width: 200px;
       height: 200px;
     }
@@ -60,10 +72,25 @@
     'job-3';
 
     grid-template-columns: 1fr;
+
+    .bio-img{
+      width: 200px;
+      height: 250px;
+    }
   }
 
   .works {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  div {
+    font-size: 1rem;
+  }
+
+  .panel-wrap {
+    .show {
+      visibility: hidden;
+    }
   }
 }
 
@@ -76,4 +103,24 @@
   .works {
     grid-template-columns: repeat(1, 1fr);
   }
+
+  .panel-wrap {
+    .show {
+      visibility: hidden;
+    }
+  }
+
+  .about-info {
+    .bio-img {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  .boxes {
+    div{
+      font-size: 1.5rem;
+    }
+  }
+
 }
