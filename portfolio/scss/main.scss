@@ -267,7 +267,9 @@ main {
     grid-template-columns: repeat(3, 1fr); //3 columns, 1 fractional
     padding-bottom: 4rem;
 
-
+    td{
+      font-weight: lighter;
+    }
 
     img { //Reducing the image t0 100% of container
       width: 100%;

@@ -272,6 +272,8 @@ main {
   grid-gap: 0.5rem;
   grid-template-columns: repeat(3, 1fr);
   padding-bottom: 4rem; }
+  .works td {
+    font-weight: lighter; }
   .works img {
     width: 100%;
     border: 3px white solid; }
