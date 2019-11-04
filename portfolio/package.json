@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "Sarah's art portfolio",
   "main": "index.js",
+  "homepage": "https://garofalod.github.io/ArtPortfolioSite/",
   "scripts": {
-    "sassRun": "node-sass -w scss/ -o dist/css/ --recursive"
+    "sassRun": "node-sass -w scss/ -o dist/css/ --recursive",
+    "deploy": "gh-pages -d dist"
   },
   "author": "Daniel Garofalo",
   "license": "MIT",
