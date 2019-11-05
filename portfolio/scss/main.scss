@@ -67,7 +67,6 @@ header{
 }
 
 //Welcome Panel
-
 //Showing the panel when loading the site
 .panel-wrap {
   position: fixed;
@@ -141,16 +140,6 @@ header{
   }
 }
 
-  /* simulate panel state control --
-  this can also be triggered by a
-  class name added to the body tag.
-  Just using a checkbox sibling here
-  //for simplicity
-  ////*/
-  //[type="checkbox"]:checked ~ .panel-wrap {
-  //  transform: translateX(100%);
-  //}
-
 
 /* demo display */
   *, *:before, *:after {
@@ -185,7 +174,7 @@ p {
 
 
 
-  //Main block and Icons
+//Main block and Icons
 main {
     //section
     padding: 4rem;

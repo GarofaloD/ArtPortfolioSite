@@ -101,6 +101,7 @@
   main{
     align-items: center;
     text-align: center;
+    background-size: auto;
 
     .lg-heading {
       line-height: 1;
@@ -167,16 +168,46 @@
     }
   }
 
+#about {
+  .lg-heading {
+    font-size: 4rem;
+  }
+}
+
   .about-info {
-    .bio-img {
+
+    .bio {
+      padding: 0px 1rem 0px 1rem;
+    }
+
+    grid-template-areas:
+            'bioimage'
+            'bio'
+            'job-1'
+            'job-2'
+            'job-3';
+
+    grid-template-columns: 1fr;
+
+    .bio-img{
       width: 200px;
-      height: 200px;
+      height: 250px;
+    }
+
+    p{
+      font-size: large;
+    }
+  }
+
+  #contact {
+    .lg-heading {
+      font-size: 4rem;
     }
   }
 
   .boxes {
     div{
-      font-size: 1.5rem;
+      font-size: 1.3rem;
     }
   }
 
