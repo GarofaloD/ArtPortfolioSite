@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Sarah's art portfolio",
   "main": "index.js",
-  "homepage": "https://garofalod.github.io/ArtPortfolioSite/",
+  "homepage": "https://garofalod.github.io/ArtPortfolioSite/portfolio",
   "scripts": {
     "sassRun": "node-sass -w scss/ -o dist/css/ --recursive",
     "deploy": "gh-pages -d dist"

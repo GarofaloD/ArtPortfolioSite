@@ -96,7 +96,7 @@
 
 //Phones
 @include mediaSm{
-  //Test for menu
+  Test for menu
   main {
     align-items: center;
     text-align: center;
@@ -136,10 +136,21 @@
   }
   //End test for menu
 
+  .menu-btn  {
+    transform: none;
 
+    &.close {
+      padding-top: 0;
+      transform: none;
 
+    }
+
+  }
+
+ //Main htitle on index resize for smaller screens
   main#home h1 {
     margin-top: 10vh;
+    font-size: 5rem;
   }
 
   .works {
