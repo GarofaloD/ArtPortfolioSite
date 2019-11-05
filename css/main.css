@@ -101,8 +101,7 @@ body {
   height: 100%;
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.5;
-  overflow: hidden; }
+  line-height: 1.5; }
   body#bg-img {
     background: url(../img/background/sunsetNight.jpg);
     background-attachment: fixed;
@@ -116,6 +115,9 @@ body {
       height: 100%;
       background: rgba(68, 68, 68, 0.5);
       z-index: -1; }
+
+#bg-img {
+  overflow: hidden; }
 
 h1, h2, h3 {
   margin: 0;
