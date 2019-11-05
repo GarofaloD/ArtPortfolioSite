@@ -94,10 +94,11 @@
   }
 }
 
+
 //Phones
 @include mediaSm{
-  Test for menu
-  main {
+  //Test for menu
+  main{
     align-items: center;
     text-align: center;
 
@@ -136,21 +137,24 @@
   }
   //End test for menu
 
+  //Eliminate transform of the menu button
   .menu-btn  {
     transform: none;
 
     &.close {
       padding-top: 0;
       transform: none;
-
     }
-
   }
 
- //Main htitle on index resize for smaller screens
+ //Main title on index resize for smaller screens
   main#home h1 {
+    .safari10 {
+      margin-top: 10vh;
+      font-size: 4rem;
+    }
     margin-top: 10vh;
-    font-size: 5rem;
+    font-size: 4rem;
   }
 
   .works {
