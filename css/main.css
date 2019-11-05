@@ -197,12 +197,6 @@ header {
     visibility: visible;
     transform: translate3d(0, 0, 0); }
 
-/* simulate panel state control --
-  this can also be triggered by a
-  class name added to the body tag.
-  Just using a checkbox sibling here
-  //for simplicity
-  ////*/
 /* demo display */
 *, *:before, *:after {
   box-sizing: border-box; }
@@ -439,7 +433,8 @@ main {
 @media screen and (max-width: 500px) {
   main {
     align-items: center;
-    text-align: center; }
+    text-align: center;
+    background-size: auto; }
     main .lg-heading {
       line-height: 1;
       margin-bottom: 1rem; }
@@ -476,8 +471,19 @@ main {
     grid-template-columns: repeat(1, 1fr); }
   .panel-wrap .show {
     visibility: hidden; }
-  .about-info .bio-img {
-    width: 200px;
-    height: 200px; }
+  #about .lg-heading {
+    font-size: 4rem; }
+  .about-info {
+    grid-template-areas: 'bioimage' 'bio' 'job-1' 'job-2' 'job-3';
+    grid-template-columns: 1fr; }
+    .about-info .bio {
+      padding: 0px 1rem 0px 1rem; }
+    .about-info .bio-img {
+      width: 200px;
+      height: 250px; }
+    .about-info p {
+      font-size: large; }
+  #contact .lg-heading {
+    font-size: 4rem; }
   .boxes div {
-    font-size: 1.5rem; } }
+    font-size: 1.3rem; } }
