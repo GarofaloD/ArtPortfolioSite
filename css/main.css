@@ -437,10 +437,10 @@ main {
     visibility: hidden; } }
 
 @media screen and (max-width: 500px) {
-  main {
+  Test for menu main {
     align-items: center;
     text-align: center; }
-    main .lg-heading {
+    Test for menu main .lg-heading {
       line-height: 1;
       margin-bottom: 1rem; }
   ul.menu-nav, div.menu-branding {
@@ -461,8 +461,14 @@ main {
       background-size: 13rem;
       width: 200px;
       height: 200px; }
+  .menu-btn {
+    transform: none; }
+    .menu-btn.close {
+      padding-top: 0;
+      transform: none; }
   main#home h1 {
-    margin-top: 10vh; }
+    margin-top: 10vh;
+    font-size: 5rem; }
   .works {
     grid-template-columns: repeat(1, 1fr); }
   .panel-wrap .show {
